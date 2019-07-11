@@ -51,56 +51,11 @@ class LinkedListQueue
             size--;
             return value;
         }
-        /*
-        T get(int index)
-        {
-            Node<T>* result;
-            result = head;
-            for (int i = 0; i < index; i++)
-            {
-                result = result->next;
-            }
-            return result->value;
-        }
 
-        
-        void append(T item)
+        T peak ()
         {
-            if (size > 0){
-                Node<T>* result;
-                result = head;
-                while (result->next != nullptr)
-                {
-                    result = result->next;
-                }
-                Node<T>* newNode = new Node<T>;
-                result->next = newNode;
-                newNode->next = nullptr;
-                newNode->value = item;
-            }
-            else
-            {
-                Node<T>* newNode = new Node<T>;
-                head = newNode;
-                newNode->value = item;
-                newNode->next = nullptr;
-            }
-            size++;
-            
+            return head->value;
         }
-
-        void remove(int index)
-        {
-            Node<T>* result;
-            result = head;
-            for (int i = 0; i < index - 1; i++)
-            {
-                result = result->next;
-            }
-            result->next = result->next->next;
-            size--;
-        }
-        */
 };
 
 int main()
