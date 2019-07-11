@@ -15,7 +15,7 @@ class LinkedListStack
 {
     private:
         int size = 0;
-        Node<T>* first;
+        Node<T>* first = new Node<T>;
     public:
         int getSize()
         {
