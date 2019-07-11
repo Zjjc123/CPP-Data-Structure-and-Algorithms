@@ -1,4 +1,3 @@
-#include <string.h>
 #include <iostream>
 
 
@@ -15,7 +14,7 @@ class LinkedListStack
 {
     private:
         int size = 0;
-        Node<T>* first;
+        Node<T>* head;
     public:
         int getSize()
         {
@@ -28,13 +27,13 @@ class LinkedListStack
             node->value = val;
             if (size == 0)
             {
-                first = node;
+                head = node;
                 node->next = nullptr;
             }
             else
             {
-                node->next = first;
-                first = node;
+                node->next = head;
+                head = node;
             }
             size++;
         }
@@ -43,8 +42,8 @@ class LinkedListStack
         {
             if (size > 0)
             {
-                T val = first->value;
-                first = first->next;
+                T val = head->value;
+                head = head->next;
                 size--;
                 return val;
             }
