@@ -10,17 +10,48 @@ class Node
 };
 
 template <typename T>
-class LinkedList
+class LinkedListQueue
 {
     private:
         int size = 0;
         Node<T>* head;
+        Node<T>* tail;
     public:
         int getSize()
         {
             return size;
         }
 
+        void enqueue(T item)
+        {
+            Node<T>* newNode = new Node<T>;
+            newNode->value = item;
+            newNode->next = nullptr;
+            if (size > 0)
+            {
+                tail->next = newNode;
+            }
+            else
+            {
+                head = newNode;
+            }
+            size++;
+            tail = newNode;
+        }
+
+        T dequeue ()
+        {
+            T value;
+            value = head->value;
+            if (size > 0)
+            {
+                value = head->value;
+                head = head->next;
+            }
+            size--;
+            return value;
+        }
+        /*
         T get(int index)
         {
             Node<T>* result;
@@ -32,6 +63,7 @@ class LinkedList
             return result->value;
         }
 
+        
         void append(T item)
         {
             if (size > 0){
@@ -68,21 +100,18 @@ class LinkedList
             result->next = result->next->next;
             size--;
         }
-        
+        */
 };
 
 int main()
 {
-    LinkedList<int> n;
+    LinkedListQueue<int> n;
 
-    n.append(1);
-    n.append(2);
-    n.append(3);
-    n.append(4);
-    //[1,2,3,4]
-    //std::cout << n.getSize() << std::endl;
-    n.remove(2);
-    //[1,2,4]
-    std::cout << n.get(1) << std::endl;
-    std::cout << n.get(2) << std::endl;
+    n.enqueue(1);
+    n.enqueue(2);
+    n.enqueue(3);
+    n.enqueue(4);
+
+    std::cout << n.dequeue() << std::endl;
+    std::cout << n.dequeue() << std::endl;
 }
