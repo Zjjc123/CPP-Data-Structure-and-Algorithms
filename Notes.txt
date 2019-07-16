@@ -1,0 +1,3 @@
+Things to Note:
+- When an array is passed in to a function as a parameter, only the address of the first element is passed :(
+- Could get size of array by using sizeof(arr)/sizeof(arr[0])
