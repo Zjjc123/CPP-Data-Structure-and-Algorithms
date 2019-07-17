@@ -8,3 +8,7 @@ A place for me to implement random C++ algorithms and datastructures
   - Sorting
     - Selection
     - Bubble
+- Data Structures
+  - Linked List
+  - Queue
+  - Stack
