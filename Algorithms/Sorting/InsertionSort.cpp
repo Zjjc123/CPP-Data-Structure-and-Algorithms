@@ -1,17 +1,24 @@
 #include "includes/helper.hpp"
 
 template<typename T>
+// Insertion Sort (Inserting elements into the correct position)
 T* InsertionSort(T* arr, int n)
 {
+    // For every element in the array
    for (int i = 1; i < n; i++)
    {
+       // If it is less than the element before it, swap
+       // Continue until the element is at the beginning or have stopped swaping 
        for (int j = i; j > 0; j--)
        {
            if (arr[j] < arr[j-1])
            {
                arr = Swap(arr, j, j-1);
            }
-           PrintArray(arr, 10);
+           else
+           {
+               break;
+           }
        }
    }
    return arr;

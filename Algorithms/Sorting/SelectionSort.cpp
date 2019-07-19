@@ -1,11 +1,14 @@
 #include "includes/helper.hpp"
 
 template<typename T>
+// Selection sort (select the smallest element and swap it to the front)
 T* SelectionSort(T* arr, int n)
 {
+    // For every element except the last one
     for (int i = 0; i < n - 1; i++)
     {
         int minIndex = i;
+        // If something else is smaller than it, remember the smallest's index
         for (int j = i + 1; j < n; j++)
         {
             if (arr[j] < arr[minIndex])
@@ -13,6 +16,7 @@ T* SelectionSort(T* arr, int n)
                 minIndex = j;
             }
         }
+        // Swap that element with the smallest
         arr = Swap(arr, i, minIndex);
     }
     return arr;

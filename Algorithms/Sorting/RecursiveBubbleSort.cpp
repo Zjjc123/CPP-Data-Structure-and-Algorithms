@@ -1,6 +1,7 @@
 #include "includes/helper.hpp"
 
 template<typename T>
+// See bubble sort (implemented recursively)
 T* BubbleSort(T* arr, int n)
 {
     if (n <= 1)

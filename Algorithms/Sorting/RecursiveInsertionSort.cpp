@@ -1,6 +1,7 @@
 #include "includes/helper.hpp"
 
 template <typename T>
+// See insertion sort (implemented recursively)
 T *InsertionSort(T *arr, int n)
 {
     if (n <= 1)
