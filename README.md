@@ -12,6 +12,7 @@ A place for me to implement random C++ algorithms and datastructures
     - Insertion
     - Recursive Insertion
     - Merge
+## Currently Implemented Data Structures
 - Data Structures
   - Linked List
   - Queue
